@@ -1,0 +1,16 @@
+name: espm-api
+
+services:
+
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: flavio52
+
+  web:
+    image: nginx:latest
+    ports:
+      - 80:80
