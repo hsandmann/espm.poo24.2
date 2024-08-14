@@ -1,7 +1,5 @@
 package espm.aula02;
 
-import java.util.Arrays;
-
 public class Ex1 {
 
     public static void main(String[] args) {
