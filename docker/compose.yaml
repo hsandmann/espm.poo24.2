@@ -8,9 +8,17 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: flavio52
+      POSTGRES_USER: api
+      POSTGRES_PASSWORD: api
+      POSTGRES_DB: api
 
   web:
     image: nginx:latest
+    build:
+      dockerfile_inline: |
+        FROM nginx:latest
+        USER root
+        
+        RUN apt-get update && apt-get install -y lsb-release iputils-ping net-tools
     ports:
       - 80:80
