@@ -2,8 +2,8 @@ package espm.banco;
 
 import java.util.UUID;
 
-public class Cliente {
-    
+public abstract class Cliente {
+
     // cria um identificado unico e atribui ao atributo id,
     // final nao permite que ninguem mais altere seu conteudo
     final private String id;
@@ -29,6 +29,11 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + id + "] " + nome;
     }
 
 }

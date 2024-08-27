@@ -8,6 +8,7 @@ public class Conta {
 
     // encapsula um objeto do tipo Cliente
     private Cliente cliente;
+    
     private double saldo = 0;
 
     public Conta(Cliente cliente) {
@@ -27,5 +28,10 @@ public class Conta {
         if (valor <= 0 || valor > this.saldo) return;
         this.saldo -= valor;
     }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
     
 }
