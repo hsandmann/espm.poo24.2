@@ -12,9 +12,11 @@ public class ExemploBanco {
 
         Conta conta1 = new Conta(c1);
 
-        System.out.println("saldo: " + conta1.getSaldo());
+        System.out.println(conta1.id + " - saldo: " + conta1.getSaldo());
         conta1.sacar(10);
-        System.out.println("saldo: " + conta1.getSaldo());
+        System.out.println(conta1.id + " - saldo: " + conta1.getSaldo());
+        conta1.depositar(20);
+        System.out.println(conta1.id + " - saldo: " + conta1.getSaldo());
 
     }
     

@@ -4,8 +4,9 @@ import java.util.UUID;
 
 public class Conta {
 
-    final private String id = UUID.randomUUID().toString();
+    final public String id = UUID.randomUUID().toString();
 
+    // encapsula um objeto do tipo Cliente
     private Cliente cliente;
     private double saldo = 0;
 
