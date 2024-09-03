@@ -2,14 +2,14 @@ package espm.banco;
 
 import java.util.UUID;
 
-public class Conta {
+public abstract class Conta {
 
     final public String id = UUID.randomUUID().toString();
 
     // encapsula um objeto do tipo Cliente
     private Cliente cliente;
     
-    private double saldo = 0;
+    protected double saldo = 0;
 
     public Conta(Cliente cliente) {
         this.cliente = cliente;
@@ -24,13 +24,15 @@ public class Conta {
         this.saldo += valor;
     }
 
-    public void sacar(double valor) {
-        if (valor <= 0 || valor > this.saldo) return;
-        this.saldo -= valor;
-    }
+    public abstract void sacar(double valor);
 
     public Cliente getCliente() {
         return cliente;
+    }
+
+    @Override
+    public String toString() {
+        return id + ": " + saldo;
     }
 
     

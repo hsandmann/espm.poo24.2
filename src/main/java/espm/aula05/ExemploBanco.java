@@ -2,6 +2,7 @@ package espm.aula05;
 
 import espm.banco.Cliente;
 import espm.banco.Conta;
+import espm.banco.ContaCorrente;
 import espm.banco.PessoaFisica;
 
 public class ExemploBanco {
@@ -11,7 +12,7 @@ public class ExemploBanco {
 
         Cliente c1 = new PessoaFisica("1berto");
 
-        Conta conta1 = new Conta(c1);
+        Conta conta1 = new ContaCorrente(c1);
 
         System.out.println(conta1.id + " - saldo: " + conta1.getSaldo());
         conta1.sacar(10);
