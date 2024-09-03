@@ -1,7 +1,6 @@
 package espm.aula09;
 
 import espm.banco.Cliente;
-import espm.banco.Conta;
 import espm.banco.ContaInvestimento;
 import espm.banco.PessoaFisica;
 
