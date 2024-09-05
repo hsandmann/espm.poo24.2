@@ -12,5 +12,10 @@ public class PessoaJuridica extends Cliente {
     public String getCnpj() {
         return cnpj;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj) && (obj instanceof PessoaJuridica);
+    }
     
 }
