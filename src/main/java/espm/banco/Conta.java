@@ -35,5 +35,9 @@ public abstract class Conta {
         return id + ": " + saldo;
     }
 
+    public String getId() {
+        return id;
+    }
+
     
 }

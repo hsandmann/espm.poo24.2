@@ -12,6 +12,8 @@ public class ContaCorrente extends Conta {
     public void sacar(double valor) {
         if (valor > 0 && valor <= (limite + saldo)) {
             this.saldo -= valor;
+        } else {
+            throw new RuntimeException("Saldo insuficiente");
         }
     }
     

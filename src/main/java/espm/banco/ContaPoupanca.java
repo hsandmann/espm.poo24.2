@@ -10,6 +10,8 @@ public class ContaPoupanca extends Conta implements Rendimento {
     public void sacar(double valor) {
         if (valor <= saldo) {
             this.saldo -= valor;
+        } else {
+            throw new RuntimeException("Saldo insuficiente");
         }
     }
 

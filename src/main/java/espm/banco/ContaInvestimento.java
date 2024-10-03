@@ -23,6 +23,8 @@ public class ContaInvestimento extends Conta implements Rendimento {
     public void sacar(double valor) {
         if (valor <= saldo && (qtdDepositos % 3) == 0) {
             this.saldo -= valor;
+        } else {
+            throw new RuntimeException("Saldo insuficiente");
         }
     }    
 

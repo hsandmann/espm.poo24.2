@@ -1,8 +1,12 @@
 package espm.banco;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public abstract class Cliente {
+
+    private List<Conta> contas = new ArrayList<>();
 
     // cria um identificado unico e atribui ao atributo id,
     // final nao permite que ninguem mais altere seu conteudo
@@ -50,6 +54,10 @@ public abstract class Cliente {
         return obj != null
             && (obj instanceof Cliente)
             && ((Cliente) obj).id.equals(this.id);
+    }
+
+    public List<Conta> getContas() {
+        return contas;
     }
 
 }
